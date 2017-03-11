@@ -24,6 +24,10 @@ a {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+.no-pointer-events {
+  pointer-events: none;
+}
+
 li {
   list-style: none;
 }
@@ -34,4 +38,15 @@ li {
 
 :focus {
   outline: none;
+}
+
+.delay-fade {
+  animation: fade 2.7s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+
+@keyframes fade {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
 }
