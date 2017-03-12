@@ -40,6 +40,18 @@ li {
   outline: none;
 }
 
+.t-5 {
+  transition-duration: 0.5s!important;
+}
+
+.all {
+  transition-property: all!important;
+}
+
+.ease {
+  transition-timing-function: ease!important;
+}
+
 .delay-fade {
   animation: fade 2.7s ease;
   animation-fill-mode: forwards;

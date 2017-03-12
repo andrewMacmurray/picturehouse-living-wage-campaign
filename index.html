@@ -3,11 +3,13 @@ layout: default
 ---
 
 {% include living-staff-overlay.html %}
-<div class="flex flex-wrap">
+<div container class="flex flex-wrap">
   {% for ph in site.data.picturehouse-sites %}
-    <div class="relative w-100 w-50-m vh-50 hide-child flex items-center justify-center bg-black tc">
-      <h2 class="white child relative z-3 tracked fw4">{{ ph.name | upcase }}</h2>
-      <div class="absolute w-100 h-100 bg-center cover dim" style="background-image: url({{ site.url }}/img/{{ ph.img }})"></div>
-    </div>
+    <a picturehouse-site href="{{ ph.link }}" target="_blank" class="relative dib w-100 w-50-m vh-50">
+      <div class="h-100 flex items-center justify-center bg-black tc">
+        <h2 class="white child relative z-3 tracked fw4">{{ ph.name | upcase }}</h2>
+        <div site-img class="absolute w-100 h-100 bg-center cover o-0 t-5 all ease" style="background-image: url({{ site.url }}/img/{{ ph.img }})"></div>
+      </div>
+    </a>
   {% endfor %}
 </div>
