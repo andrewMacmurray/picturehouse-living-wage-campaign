@@ -1,11 +1,15 @@
-- name: Hackney Picturehouse
+- name: Hackney
   img: hackney.jpg
+  link: http://www.facebook.com/HackneyLivingWage/
 
-- name: The Ritzy
-  img: ritzy.jpg
+- name: Brixton
+  img: brixton.jpg
+  link: https://www.facebook.com/RitzyLivingWage/
 
-- name: Picturehouse Central
+- name: Central
   img: central.jpg
+  link: http://www.facebook.com/CentralLivingWage
 
-- name: Crouch End Picturehouse
+- name: Crouch End
   img: crouch-end.jpg
+  link: https://www.facebook.com/crouchendlivingwage
