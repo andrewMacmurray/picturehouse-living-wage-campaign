@@ -21,6 +21,8 @@ var menu = (function () {
 
     $menu.classList.add('o-100', 'z-4')
     $menu.classList.remove('o-0')
+
+    document.body.classList.add('overflow-hidden')
   }
 
   function close () {
@@ -32,6 +34,8 @@ var menu = (function () {
 
     $menu.classList.add('o-0')
     $menu.classList.remove('o-100')
+
+    document.body.classList.remove('overflow-hidden')
 
     setTimeout(function () {
       $menu.classList.remove('z-4')
