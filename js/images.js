@@ -5,6 +5,8 @@ var images = (function () {
       onSitesLoad(function () {
         animateSites()
         setTimeout(animateLogo, 500)
+        setTimeout(hideSiteText, 1500)
+        setTimeout(removeDelay, 2500)
       })
     })
   }
@@ -28,6 +30,24 @@ var images = (function () {
   function animateLogo () {
     var $logoContainer = helpers.$get('[logo-container]')
     $logoContainer.classList.add('delay-fade')
+  }
+
+  function forEachSiteText (cb) {
+    var $imgContainers = helpers.$getAll('[site-img-container]')
+    $imgContainers.forEach(cb)
+  }
+
+  function hideSiteText () {
+    forEachSiteText(function (container) {
+      container.classList.add('hide-child')
+      container.firstElementChild.classList.add('t-10')
+    })
+  }
+
+  function removeDelay () {
+    forEachSiteText(function (container) {
+      container.firstElementChild.classList.remove('t-10')
+    })
   }
 
   function animateSites () {
