@@ -2,5 +2,6 @@
 
   picturehouseSites.shuffleSites()
   images.handleImagesLoad()
+  menu.addListeners()
 
 }())
