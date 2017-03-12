@@ -13,9 +13,14 @@ var picturehouseSites = (function () {
   function shuffleSites () {
     var container = helpers.$get('[container]')
     var sites = helpers.$getAll('[picturehouse-site]')
+    var last = helpers.$get('[picturehouse-site-odd]')
 
     clearContents(container)
     appendItems(container, helpers.shuffle(sites))
+
+    if (last) {
+      container.appendChild(last)
+    }
   }
 
   return {

@@ -40,6 +40,10 @@ li {
   outline: none;
 }
 
+.w6 {
+  width: var(--width-6);
+}
+
 .t-3 {
   transition-duration: 0.3s!important;
 }

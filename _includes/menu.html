@@ -1,8 +1,8 @@
-<div menu class="fixed left-0 top-0 tc t-3 all ease o-0 bg-black-80 w-100 h-100">
-  <ul>
+<div menu class="fixed right-0 top-0 tl t-3 all ease o-0 bg-black-80 w6 h-100">
+  <ul class="mw4 center">
     <ul class="mt5">
       {% for item in site.data.menu %}
-        <a class="white pa3" href="{{ item.url }}" target="_blank">
+        <a class="white pv2 pv3-ns t-3 all ease hover-red db" href="{{ item.url }}" target="_blank">
           <li>{{ item.title }}</li>
         </a>
       {% endfor %}
@@ -10,7 +10,7 @@
 
     <ul class="mt4">
       {% for item in site.data.picturehouse-sites %}
-        <a class="white pa3" href="{{ item.url }}" target="_blank">
+        <a class="white pv2 pv3-ns t-3 all ease hover-red db" href="{{ item.url }}" target="_blank">
           <li>{{ item.name }}</li>
         </a>
       {% endfor %}
