@@ -1,13 +1,5 @@
 var picturehouseSites = (function () {
 
-  function getPicturehouseSites () {
-    return helpers.toArray(document.querySelectorAll('[picturehouse-site]'))
-  }
-
-  function getPicturehouseContainer () {
-    return document.querySelector('[container]')
-  }
-
   function clearContents (element) {
     element.innerHTML = ''
   }
@@ -19,8 +11,8 @@ var picturehouseSites = (function () {
   }
 
   function shuffleSites () {
-    var container = getPicturehouseContainer()
-    var sites = getPicturehouseSites()
+    var container = helpers.$get('[container]')
+    var sites = helpers.$getAll('[picturehouse-site]')
 
     clearContents(container)
     appendItems(container, helpers.shuffle(sites))
