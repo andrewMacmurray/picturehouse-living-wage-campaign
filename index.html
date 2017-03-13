@@ -14,7 +14,7 @@ layout: default
 <div container class="flex flex-wrap">
   {% for ph in site.data.picturehouse-sites %}
     <a picturehouse-site href="{{ ph.url }}" target="_blank" class="relative dib w-100 w-50-m vh-50">
-      <div site-img-container class="h-100 flex items-center justify-center bg-black tc">
+      <div site-img-container class="h-100 flex items-center justify-center bg-black tc hide-child">
         <h2 class="white child relative z-3 tracked fw4">{{ ph.name | upcase }}</h2>
         <div site-img class="absolute left-0 w-100 h-100 bg-center cover o-0 t-5 all ease" style="background-image: url({{ site.url }}/img/{{ ph.img }})"></div>
       </div>
