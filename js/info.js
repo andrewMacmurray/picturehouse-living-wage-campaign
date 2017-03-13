@@ -6,17 +6,19 @@ var info = (function () {
   }
 
   function show () {
-    console.log('show');
     var $info = helpers.$get('[info]')
     $info.setAttribute('open', 'true')
     $info.classList.remove('o-0')
+    $info.classList.add('z-4')
   }
 
   function hide () {
-    console.log('hide');
     var $info = helpers.$get('[info]')
     $info.setAttribute('open', 'false')
     $info.classList.add('o-0')
+    setTimeout(function () {
+      $info.classList.remove('z-4')
+    }, 300)
   }
 
   function toggle () {
