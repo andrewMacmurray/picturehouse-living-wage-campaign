@@ -1,10 +1,10 @@
-- name: Hackney
-  img: hackney.jpg
-  url: http://www.facebook.com/HackneyLivingWage/
-
 - name: Brixton
   img: brixton.jpg
   url: https://www.facebook.com/RitzyLivingWage/
+
+- name: Hackney
+  img: hackney.jpg
+  url: http://www.facebook.com/HackneyLivingWage/
 
 - name: Central
   img: central.jpg
