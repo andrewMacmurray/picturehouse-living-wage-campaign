@@ -16,11 +16,11 @@ var info = (function () {
   function hide () {
     var $info = helpers.$get('[info]')
     $info.setAttribute('open', 'false')
-    $info.classList.add('o-0')
+    $info.classList.add('o-0', 'overflow-y-hidden')
     setTimeout(function () {
-      $info.classList.remove('z-4')
       document.body.classList.remove('overflow-y-hidden')
-    }, 400)
+      $info.classList.remove('z-4')
+    }, 300)
   }
 
   function toggle () {
