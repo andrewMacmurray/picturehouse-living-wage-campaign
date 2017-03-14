@@ -40,6 +40,10 @@ li {
   outline: none;
 }
 
+.tj {
+  text-align: justify;
+}
+
 .w6 {
   width: var(--width-6);
 }

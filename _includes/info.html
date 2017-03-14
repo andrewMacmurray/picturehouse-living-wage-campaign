@@ -1,16 +1,19 @@
 <h3 info-button class="fixed left-0 top-0 pa4 pointer ma0 white z-5">INFO</h3>
 <div info open='false' class="fixed w-100 h-100 bg-black-80 white z-4 o-0 t-3 ease all">
-  <div class="pa4 mt5 mw7 center">
+  <div class="pa4 mt5 mw9 center tj">
     {% for text in site.data.info %}
       {% if text.list %}
-        <ul class="pl5 f4-ns f6 fw3">
+        <ul class="pl5 f3-ns f6 fw3">
           {% for l in text.list %}
             <li style="list-style-type: circle">{{ l }}</li>
           {% endfor %}
         </ul>
       {% else %}
-        <p class="fw3 f4-ns f6">{{ text }}</p>
+        <p class="fw3 f3-ns f6">{{ text }}</p>
       {% endif %}
     {% endfor %}
+    <div class="tc mt5">
+      <img src="{{ site.url }}/img/living-staff.svg" alt="living-staff" class="w6 center">
+    </div>
   </div>
 </div>
