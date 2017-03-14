@@ -4,12 +4,16 @@
 
 - name: Hackney
   img: hackney.jpg
-  url: http://www.facebook.com/HackneyLivingWage/
+  url: https://www.facebook.com/HackneyLivingWage/
 
 - name: Central
   img: central.jpg
-  url: http://www.facebook.com/CentralLivingWage
+  url: https://www.facebook.com/CentralLivingWage
 
 - name: Crouch End
   img: crouch-end.jpg
   url: https://www.facebook.com/crouchendlivingwage
+
+- name: Brighton
+  img: brighton.jpg
+  url: https://www.facebook.com/UnioniseDukes
