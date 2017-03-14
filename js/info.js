@@ -6,17 +6,21 @@ var info = (function () {
   }
 
   function show () {
-    console.log('show');
+    document.body.classList.add('overflow-y-hidden')
     var $info = helpers.$get('[info]')
     $info.setAttribute('open', 'true')
     $info.classList.remove('o-0')
+    $info.classList.add('z-4')
   }
 
   function hide () {
-    console.log('hide');
     var $info = helpers.$get('[info]')
     $info.setAttribute('open', 'false')
     $info.classList.add('o-0')
+    setTimeout(function () {
+      $info.classList.remove('z-4')
+      document.body.classList.remove('overflow-y-hidden')
+    }, 400)
   }
 
   function toggle () {
