@@ -4,7 +4,12 @@
   "description": "A front page for the Picturehouse living wage campaign",
   "main": "postcss-config.js",
   "scripts": {
-    "css": "postcss --watch --config postcss-config.js"
+    "css": "postcss --watch --config postcss-config.js",
+    "buildcss": "postcss --config postcss-config.js",
+    "watchify": "watchify ./js/main.js -o bundle.js",
+    "buildjs": "browserify ./js/main.js | uglifyjs -mc > bundle.js",
+    "watch": "npm run css & npm run watchify",
+    "bundle": "npm run buildcss & npm run buildjs"
   },
   "repository": {
     "type": "git",
@@ -22,9 +27,12 @@
     "postcss-cli": "^2.6.0",
     "postcss-custom-media": "^5.0.1",
     "postcss-custom-properties": "^5.0.2",
-    "postcss-import": "^9.1.0"
+    "postcss-import": "^9.1.0",
+    "uglify-js": "^2.8.12",
+    "watchify": "^3.9.0"
   },
   "dependencies": {
+    "imagesloaded": "^4.1.1",
     "tachyons-custom": "^4.5.4"
   }
 }
