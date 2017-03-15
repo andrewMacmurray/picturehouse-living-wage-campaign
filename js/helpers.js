@@ -1,36 +1,32 @@
-var helpers = (function () {
+function shuffle (arr) {
+  var i = arr.length, temp, j
 
-  function shuffle (arr) {
-    var i = arr.length, temp, j
-
-    while (0 !== i) {
-      j = Math.floor(Math.random() * i)
-      i -= 1
-      temp = arr[i]
-      arr[i] = arr[j]
-      arr[j] = temp
-    }
-
-    return arr
+  while (0 !== i) {
+    j = Math.floor(Math.random() * i)
+    i -= 1
+    temp = arr[i]
+    arr[i] = arr[j]
+    arr[j] = temp
   }
 
-  function toArray (nodeList) {
-    return [].slice.call(nodeList)
-  }
+  return arr
+}
 
-  function $get (selector) {
-    return document.querySelector(selector)
-  }
+function toArray (nodeList) {
+  return [].slice.call(nodeList)
+}
 
-  function $getAll (selector) {
-    return toArray(document.querySelectorAll(selector))
-  }
+function $get (selector) {
+  return document.querySelector(selector)
+}
 
-  return {
-    shuffle: shuffle,
-    toArray: toArray,
-    $get: $get,
-    $getAll: $getAll
-  }
+function $getAll (selector) {
+  return toArray(document.querySelectorAll(selector))
+}
 
-}())
+module.exports = {
+  shuffle: shuffle,
+  toArray: toArray,
+  $get: $get,
+  $getAll: $getAll
+}

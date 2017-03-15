@@ -32,3 +32,4 @@ exclude:
   - _css
   - postcss-config.js
   - package.json
+  - js
